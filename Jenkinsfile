@@ -69,7 +69,7 @@ stages {
         }
     }
     
-     stage('Commit and Push to GitHub') {
+    stage('Commit and Push to GitHub') {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: GITHUB_CREDENTIALS_ID, usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
@@ -90,5 +90,4 @@ stages {
             }
         } 
     }
-}
 }
